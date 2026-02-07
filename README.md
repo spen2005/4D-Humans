@@ -1,7 +1,7 @@
 # 4DHumans: Reconstructing and Tracking Humans with Transformers
 Code repository for the paper:
 **Humans in 4D: Reconstructing and Tracking Humans with Transformers**
-[Shubham Goel](https://people.eecs.berkeley.edu/~shubham-goel/), [Georgios Pavlakos](https://geopavlakos.github.io/), [Jathushan Rajasegaran](http://people.eecs.berkeley.edu/~jathushan/), [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/)<sup>\*</sup>, [Jitendra Malik](http://people.eecs.berkeley.edu/~malik/)<sup>\*</sup>
+[Shubham Goel](https://people.eecs.berkeley.edu/~shubham-goel/), [Georgios Pavlakos](https://geopavlakos.github.io/), [Jathushan Rajasegaran](https://brjathu.github.io/), [Angjoo Kanazawa](https://people.eecs.berkeley.edu/~kanazawa/)<sup>\*</sup>, [Jitendra Malik](http://people.eecs.berkeley.edu/~malik/)<sup>\*</sup>
 
 [![arXiv](https://img.shields.io/badge/arXiv-2305.20091-00ff00.svg)](https://arxiv.org/pdf/2305.20091.pdf)  [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://shubham-goel.github.io/4dhumans/)     [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Ex4gE5v1bPR3evfhtG7sDHxQGsWwNwby?usp=sharing)  [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/brjathu/HMR2.0)
 
@@ -73,7 +73,7 @@ Run evaluation on multiple datasets as follows, results are stored in `results/e
 python eval.py --dataset 'H36M-VAL-P2,3DPW-TEST,LSP-EXTENDED,POSETRACK-VAL,COCO-VAL' 
 ```
 
-By default, our code uses the released checkpoint (mentioned as HMR2.0b in the paper). To use the HMR2.0a checkpoint, you may download and untar from [here](https://people.eecs.berkeley.edu/~jathushan/projects/4dhumans/hmr2a_model.tar.gz)
+By default, our code uses the released checkpoint (mentioned as HMR2.0b in the paper). To use the HMR2.0a checkpoint, you may download and untar from [here](https://www.cs.utexas.edu/~pavlakos/4dhumans/hmr2a_model.tar.gz)
 
 ## Preprocess code
 To preprocess LSP Extended and Posetrack into metadata zip files for evaluation, see `hmr2/datasets/preprocess`.
