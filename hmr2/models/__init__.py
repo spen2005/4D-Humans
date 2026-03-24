@@ -31,7 +31,7 @@ def download_models(folder=CACHE_DIR_4DHUMANS):
 def check_smpl_exists():
     import os
     candidates = [
-        f'{CACHE_DIR_4DHUMANS}/data/smpl/SMPL_NEUTRAL.pkl',
+        f'{os.getenv("CHECKPOINT_DIR")}/smpl/SMPL_NEUTRAL.pkl',
         f'data/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl',
     ]
     candidates_exist = [os.path.exists(c) for c in candidates]
