@@ -65,11 +65,11 @@ def convert_pkl(old_pkl, new_pkl):
         pickle.dump(loaded, outfile)
 
 DEFAULT_CHECKPOINT=f'{CACHE_DIR_4DHUMANS}/logs/train/multiruns/hmr2/0/checkpoints/epoch=35-step=1000000.ckpt'
-def load_hmr2(checkpoint_path=DEFAULT_CHECKPOINT):
+def load_hmr2(focal_length: float, checkpoint_path=DEFAULT_CHECKPOINT):
     from pathlib import Path
     from ..configs import get_config
     model_cfg = str(Path(checkpoint_path).parent.parent / 'model_config.yaml')
-    model_cfg = get_config(model_cfg, update_cachedir=True)
+    model_cfg = get_config(model_cfg, focal_length=focal_length, update_cachedir=True)
 
     # Override some config values, to crop bbox correctly
     if (model_cfg.MODEL.BACKBONE.TYPE == 'vit') and ('BBOX_SHAPE' not in model_cfg.MODEL):
